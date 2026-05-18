@@ -230,7 +230,10 @@ node_modules/
 parts/
 sdist/
 var/
+# Ignore stray npm manifests; keep Docusaurus project under en/
 package*.json
+!en/package.json
+!en/package-lock.json
 *.egg-info/
 .installed.cfg
 *.egg
