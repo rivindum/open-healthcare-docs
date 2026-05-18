@@ -280,3 +280,7 @@ site*/
 
 # macOs
 .DS_Store
+
+# Docusaurus (generated locally; do not commit)
+en/.docusaurus/
+en/build/

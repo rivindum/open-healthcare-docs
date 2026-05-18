@@ -1,24 +1,30 @@
+---
+sidebar_position: 1
+title: "Accelerators"
+description: WSO2 Open Healthcare is a solution built to leverage development of the Healthcare products to be easier and faster.
+---
+
 #Architecture and key components
 
-WSO2 Healthcare Solution is a solution built to leverage development of the Healthcare products to be easier and faster. It reiterates one of the main problems the healthcare industry is facing that is interoperability. The Healthcare solution is built on a novel approach to support healthcare interoperability through the widely-recognized Fast Healthcare Interoperability Resources (FHIR) standards. We provide several healthcare accelerators to speedup the development process and significantly improve the go-to-market time.
+WSO2 Open Healthcare is a solution built to leverage development of the Healthcare products to be easier and faster. It reiterates one of the main problems the healthcare industry is facing that is interoperability. The Healthcare solution is built on a novel approach to support healthcare interoperability through the widely-recognized Fast Healthcare Interoperability Resources (FHIR) standards. We provide several healthcare accelerators to speedup the development process and significantly improve the go-to-market time.
 
-The diagram below depicts of what the WSO2 Healthcare Solution offers.
+The diagram below depicts of what the WSO2 Open Healthcare offers.
 
-![Healthcare Architecture](../../assets/img/get-started/healthcare-architecture.png) 
+![WSO2 Open Healthcare Architecture](/assets/img/get-started/healthcare-architecture.png)
 
 Our solution caters main segments in the industry, namely, Providers (Hospitals, Clinics etc.), Payers (Health insurance companies), Vendors (companies who build healthcare products to solve various problems such as population health, patient360, interoperability etc.), PBMs (Pharmacy Benefit Managers), Pharmacies etc.
 
-WSO2 Healthcare Solution is built on top of industry recognized WSO2 API Manager, WSO2 Enterprise Integrator and WSO2 Identity and Access Manager products. We always think from the health IT developer's perspective and come up with novel approaches to speed up the implementation process with reliability.
+WSO2 Open Healthcare is built on top of industry recognized WSO2 API Manager, WSO2 Enterprise Integrator and WSO2 Identity and Access Manager products. We always think from the health IT developer's perspective and come up with novel approaches to speed up the implementation process with reliability.
 
 ### Accelerators
 
-WSO2 Healthcare Solution comes up with several accelerators to speed up the health IT development process. Source system connectors, FHIR API templates, FHIR Open API definitions, HL7/X12 templates are some of the healthcare accelerators we provide in addition to many other integration accelerators.
+WSO2 Open Healthcare comes up with several accelerators to speed up the health IT development process. Source system connectors, FHIR API templates, FHIR Open API definitions, HL7/X12 templates are some of the healthcare accelerators we provide in addition to many other integration accelerators.
 
 #### Source System Connectors
 
-WSO2 Healthcare Solution can connect to any source system which follows a standard protocol. Additionally, we provide low code developer accelerators called `Connectors` to any health system based on an Open API specification or based on FHIR standard. 
+WSO2 Open Healthcare can connect to any source system which follows a standard protocol. Additionally, we provide low code developer accelerators called `Connectors` to any health system based on an Open API specification or based on FHIR standard. 
 
-WSO2 Healthcare Solution has an in-built HL7 transport which allows you to communicate with HL7 servers in both receiving and sending modes.
+WSO2 Open Healthcare has an in-built HL7 transport which allows you to communicate with HL7 servers in both receiving and sending modes.
 
 We can also integrate easily with databases, devices, file servers, SaaS services etc. through our powerful integration platform.
 
@@ -37,4 +43,4 @@ FHIR defines a RESTful API interface to any FHIR resource](https://hl7.org/fhir/
 
 #### Security and Privacy
 
-WSO2 Healthcare Solution supports SMART on FHIR specification and provides easy access to security and privacy controls your solution needs. Integration with your on-premise user stores, active directories and LDAPs are supported. If you have an on-premise IAM solution, WSO2 can federate identity and integrate with it. Open standards like OpenID Connect, OAuth 2.0 and scope based access control is supported natively in the solution. Advanced features such as multifactor authentication, adaptive authentication and fine-grained access control are also made available through WSO2 Healthcare Solution.
+WSO2 Open Healthcare supports SMART on FHIR specification and provides easy access to security and privacy controls your solution needs. Integration with your on-premise user stores, active directories and LDAPs are supported. If you have an on-premise IAM solution, WSO2 can federate identity and integrate with it. Open standards like OpenID Connect, OAuth 2.0 and scope based access control is supported natively in the solution. Advanced features such as multifactor authentication, adaptive authentication and fine-grained access control are also made available through WSO2 Open Healthcare.

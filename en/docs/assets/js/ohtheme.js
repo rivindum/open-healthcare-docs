@@ -3,8 +3,7 @@
  *
  * WSO2 Inc. licenses this file to you under the Apache License,
  * Version 2.0 (the "License"); you may not use this file except
- * in compliance with the License.
- * You may obtain a copy of the License at
+ * in compliance with the License. You may obtain a copy of the License at
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -19,12 +18,7 @@
 /*
 * Handle opening external links in a new tab
 */
-/* 
- * Initialize highlightjs 
- */
-window.addEventListener("DOMContentLoaded", function() {
-    hljs.initHighlightingOnLoad();
-});
+/* Docusaurus uses Prism for fenced code blocks; do not run highlight.js here — it breaks token styling. */
 (function() {
     if(document.querySelector('.tab-selector')){
         document.querySelector('.tab-selector').addEventListener('click', function(e) {

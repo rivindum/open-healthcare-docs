@@ -1,3 +1,9 @@
+---
+sidebar_position: 2
+title: "Overview - SMART on FHIR"
+description: Healthcare APIs play a pivotal role in modern healthcare by enabling systems to seamlessly exchange data across platforms, such as Electronic Medical Records (EMRs) and mobile health applications.
+---
+
 # Overview - SMART on FHIR
 
 ## Securing Health APIs: Why it is essential?
@@ -28,7 +34,6 @@ Below are the key steps involved in launching a SMART app and gaining access to 
 1. Launch App: Standalone Launch or EHR Launch
 
     A SMART app can be launched in two ways. In a Standalone Launch, the app initiates the login process independently, such as a health web app used by a patient, where the user logs in through an external identity provider connected to the EHR system. Alternatively, in an EHR Launch, the app is opened within the context of an EHR session, like an app used by a clinician during a patient visit, with the EHR passing a launch token containing relevant patient or encounter information to the app.
-
 
 2. Retrieve .well-known/smart-configuration
 

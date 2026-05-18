@@ -1,3 +1,9 @@
+---
+sidebar_position: 1
+title: "Example"
+description: This example will guide you to convert an HL7 message to FHIR using WSO2 V2-To-FHIR datamapper.
+---
+
 # Example
 
 ## Coverting HL7 message to FHIR
@@ -13,9 +19,8 @@ This example will guide you to convert an HL7 message to FHIR using WSO2 V2-To-F
 
 ## Configuring the datamapper
 
-
 After adding the datamapper you will be able to see it in the palette. CreateResources operation is used to construct the required resources from a HL7 V2 message available within the message flow. You can drag and drop the CreateResources operation to the canvas in the Integration Studio and configure.
 
 In the following example we have added Patient and Encounter resources to be created from the hl7 v2 message. For example, If the HL7 V2 message has PID segments and PV segments it will create Patient and encounter resources accordingly with the prebuild mappings and output the result as a bundle to the message context. You can provide the resources need to be created from the HL7 message by giving resource names in comma seperated manner.
 
-![implementing-business-logic]({{base_path}}/assets/img/learn/fhir-mappers/v2-to-fhir-mapper.png)
+![implementing-business-logic](/assets/img/learn/fhir-mappers/v2-to-fhir-mapper.png)

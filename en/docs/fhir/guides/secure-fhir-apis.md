@@ -1,19 +1,23 @@
+---
+sidebar_position: 16
+title: "Consume FHIR APIs"
+description: It is important to secure the FHIR APIs deployed on the WSO2 Open Healthcare to prevent unauthorized access.
+---
+
 # Consume FHIR APIs
 
 ## Overview
 
-It is important to secure the FHIR APIs deployed on the WSO2 Healthcare Solution to prevent unauthorized access. In this document you will see how the WSO2 Healthcare Solution is capable of providing secure access to APIs. The generic authentication mechanisms discussed [here]([https://apim.docs.wso2.com/en/4.0.0/design/api-security/api-authentication/api-authentication-overview/#](https://apim.docs.wso2.com/en/4.0.0/design/api-security/api-authentication/api-authentication-overview/#)!) can be used to secure the APIs. <br>In addition to these, we have provided support for SMART backend services authorization as well which will be discussed in the following section.
+It is important to secure the FHIR APIs deployed on the WSO2 Open Healthcare to prevent unauthorized access. In this document you will see how the WSO2 Open Healthcare is capable of providing secure access to APIs. The generic authentication mechanisms discussed [here]([https://apim.docs.wso2.com/en/4.0.0/design/api-security/api-authentication/api-authentication-overview/#](https://apim.docs.wso2.com/en/4.0.0/design/api-security/api-authentication/api-authentication-overview/#)!) can be used to secure the APIs. <br />In addition to these, we have provided support for SMART backend services authorization as well which will be discussed in the following section.
 
 ## Prerequisites
 
 - The developer needs permission to publish API using the publisher portal.
-- FHIR API needs to be deployed in the APIM component of the WSO2 Healthcare Solution.
+- FHIR API needs to be deployed in the APIM component of the WSO2 Open Healthcare.
 
 ## SMART backend services authorization
 
-This protocol is to be used for clients that connect to FHIR servers autonomously or semi-autonomously. According to this protocol, the client registers itself to the server with its public key initially. When the client issues a request to obtain access tokens from the server to access the FHIR APIs, it will send a JWT assertion signed by the client's private key. <br>The server will validate the assertion and responds with the access token only if the validation of the assertion is successful.
-
- <img src="../../../assets/img/guildes/securing-fhir-api/smartbeauth.png" width="700">
+This protocol is to be used for clients that connect to FHIR servers autonomously or semi-autonomously. According to this protocol, the client registers itself to the server with its public key initially. When the client issues a request to obtain access tokens from the server to access the FHIR APIs, it will send a JWT assertion signed by the client's private key. <br />The server will validate the assertion and responds with the access token only if the validation of the assertion is successful.
 
 Following are the headers and claims the client will use to generate the JWT assertion.
 
@@ -24,7 +28,6 @@ Following are the headers and claims the client will use to generate the JWT ass
 | kid | required |
 | typ | required | Fixed value - JWT |
 | jku | optional |
-
 
 ### Claims
 
@@ -63,7 +66,7 @@ _timeout = "10"_
 
 _capacity = "5000"_
     
-```    
+```
 
 #### Event Listener Configs
 
@@ -72,7 +75,7 @@ _capacity = "5000"_
 | type | Predefined value. Should not be modified. |
 | name | Predefined value. Should not be modified. |
 | order | Predefined value. Should not be modified. |
-| allowed\_jwt\_expiry\_millis | The allowed expiration time of the JWT. If the _exp_ claim of the JWT has a value that is greater than this value in the future, the request will be rejected. <br><strong>The default value is 5 mins.</strong><br>If _iat_ present, (exp - iat) \< allowed\_jwt\_expiry\_millisElse, (exp - current system time) \< allowed\_jwt\_expiry\_millis |
+| allowed\_jwt\_expiry\_millis | The allowed expiration time of the JWT. If the _exp_ claim of the JWT has a value that is greater than this value in the future, the request will be rejected. <br /><strong>The default value is 5 mins.</strong><br />If _iat_ present, (exp - iat) \< allowed\_jwt\_expiry\_millisElse, (exp - current system time) \< allowed\_jwt\_expiry\_millis |
 | token\_endpoint\_alias | An alias for the token endpoint URL that can be used as the _aud_ claim. |
 
 #### Cache Configs
@@ -86,8 +89,10 @@ For more information, please refer to [the spec](http://www.hl7.org/fhir/smart-a
 
 ## API security recommendations
 
-It is recommended that the FHIR APIs that are developed to be consumed by private client applications (e.g., mobile apps, Javascript apps) to support the Authorization Code grant type for the application to get access tokens to consume the API. The Authorization Code grant type is required for the applications that are SMART compliant. <br>In the Authorization Code grant flow, the client exchanges an Authorization Code generated by the authorization endpoint for an access token. For more information on this grant type, please refer [Authorization Code Grant](https://apim.docs.wso2.com/en/4.0.0/design/api-security/oauth2/grant-types/authorization-code-grant/) Documentation.
+It is recommended that the FHIR APIs that are developed to be consumed by private client applications (e.g., mobile apps, Javascript apps) to support the Authorization Code grant type for the application to get access tokens to consume the API. The Authorization Code grant type is required for the applications that are SMART compliant. <br />In the Authorization Code grant flow, the client exchanges an Authorization Code generated by the authorization endpoint for an access token. For more information on this grant type, please refer [Authorization Code Grant](https://apim.docs.wso2.com/en/4.0.0/design/api-security/oauth2/grant-types/authorization-code-grant/) Documentation.
 
-It is also a best practice to use the PKCE extension when using the Authorization Code grant. The PKCE extension is another layer of security on top of the Authorization Code grant. This extra layer of security is recommended because it is possible for an Authorization Code to get intercepted.<br> To avoid this, when requesting the Authorization Code from the authorization endpoint, we send a code challenge in the request. The code challenge is the hashed version of an attribute called the code verifier.<br> Once the client gets the Authorization Code and then makes the token request, it sends this code verifier as well as a request parameter. The server will issue the token only if the code verifier is verified against the previously sent code challenge. More information on PKCE can be found [here](https://www.rfc-editor.org/rfc/rfc7636#page-10)
+It is also a best practice to use the PKCE extension when using the Authorization Code grant. The PKCE extension is another layer of security on top of the Authorization Code grant. This extra layer of security is recommended because it is possible for an Authorization Code to get intercepted.<br /> To avoid this, when requesting the Authorization Code from the authorization endpoint, we send a code challenge in the request. The code challenge is the hashed version of an attribute called the code verifier.<br /> Once the client gets the Authorization Code and then makes the token request, it sends this code verifier as well as a request parameter. The server will issue the token only if the code verifier is verified against the previously sent code challenge. More information on PKCE can be found [here](https://www.rfc-editor.org/rfc/rfc7636#page-10)
 
 Support for PKCE has been introduced in APIM 4.1.0. click [here](https://apim.docs.wso2.com/en/latest/consume/manage-application/generate-keys/generate-api-keys/#generating-application-keys-with-pkce-enabled]) for more details.
+![smartbeauth](/assets/img/guildes/securing-fhir-api/smartbeauth.png)
+

@@ -1,3 +1,9 @@
+---
+sidebar_position: 1
+title: "Example"
+description: This example will guide you to convert an XML Payload to [CRBB-Patient profile.](http://hl7.org/fhir/us/carin-bb/STU1.1/StructureDefinition-C4BB-Patient.html) The Data Service is created to use as the backend source.
+---
+
 # Example
 
 ## Coverting XML payload to C4BB Patient Example
@@ -6,7 +12,7 @@ This example will guide you to convert an XML Payload to [CRBB-Patient profile.]
 
 ## What you will build
 1. Data Service to create the XML Payload. 
-```
+```xml
 <patientCollection xmlns="http://ws.wso2.org/dataservice">
     <patient>
         <id>285137</id>
@@ -35,7 +41,7 @@ This example will guide you to convert an XML Payload to [CRBB-Patient profile.]
 ```
 2. FHIR Mappings to map the elements of the existing payload to the CRBB-Patient profile. 
 3. CRBB Patient Payload. 
-```
+```json
 {
     "resourceType": "Bundle",
     "meta": {
@@ -181,17 +187,15 @@ The Data Service is created to use as the backend source. You can use any backen
 
 3. Invoke the Dataservice with the following URL, and you should be able to see a response in the step 1. Now the backend
 source is ready to be used. 
-``` 
+```bash
 curl --location --request GET 'http://localhost:8280/services/patient_DataService.SOAP12Endpoint/patient/285137'
 ```
-
 
 ### Import Projects
 The user will be provided two project zip files, which are projectsGenerationTool_sampleclient_api.zip file and projectsGenerationTool_sampleclient_integration.zip file. These need to be imported to [WSO2 Integration Studio](https://wso2.com/integration/integration-studio/)
 
 1. Unzip the two projects. 
 2. Please follow the steps to import the projects to the Integration Studio. [Import-Projects](https://apim.docs.wso2.com/en/latest/integrate/develop/importing-projects/)
-
 
 ### Step 1: Implementing business logic
 1. No mandatory changes will be done to The sampleclient_api project. 
@@ -202,7 +206,7 @@ In this example, it is **sampleclient_C4BB_C4BBPatient_search_seq.xml**
 
 Developers can implement any business logic using the standard WSO2 integration components(mediators, connectors etc.) by dragging and dropping to the canvas from the integration studio tool palette just before the source connect logic is triggered from the call template mediator. 
 
-![implementing-business-logic]({{base_path}}/assets/img/learn/fhir-mapping-templates/business-logic.png)
+![implementing-business-logic](/assets/img/learn/fhir-mapping-templates/business-logic.png)
 
 ### Step 2:Implement source system connection logic for the relevant FHIR API
 
@@ -212,10 +216,10 @@ sourceConnect_template suffix.
 In this example, it is **sampleclient_C4BB_C4BBPatient_search_sourceConnect_template.xml**
 
 In this step we can provide the Data Service endpoint using a call mediator. 
-![implementing source system connection logic]({{base_path}}/assets/img/learn/fhir-mapping-templates/source-system-connection.png)
+![implementing source system connection logic](/assets/img/learn/fhir-mapping-templates/source-system-connection.png)
 
 The source will be as below. 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <template name="sampleclient_C4BB_C4BBPatient_search_sourceConnect_template" xmlns="http://ws.apache.org/ns/synapse">
     <parameter defaultValue="" isMandatory="false" name="id"/>
@@ -256,7 +260,7 @@ We need to provide the following Xpaths according to the example.
 2. Relative path to source payload child data elements
     - **source -> read: -> //id**
 
-![crbb-patient.yaml file]({{base_path}}/assets/img/learn/fhir-mapping-templates/crbb-patient-yaml-file.png)
+![crbb-patient.yaml file](/assets/img/learn/fhir-mapping-templates/crbb-patient-yaml-file.png)
 
 **Key Value template**
 The Key Value Mapping template file is used to resolve the source system values with the FHIR specific values for 
@@ -265,7 +269,7 @@ by the FHIR specification which are ‘male’ for Male, ‘female’ for Female
 have a different representation. In such cases we can use the Key Value Mapping template to map the source system 
 representation to the standard FHIR representation. 
 
-### Step 4: Export Composite application and deploy in the Micro Integrator. 
+### Step 4: Export the composite application and deploy to your integration runtime. 
 After completing the above steps, you can export the deployable composite applications for the two projects. 
 Following artifacts need to be deployed in the WSO2 openhealthcare integration server in order to make FHIR mapper templates to work.
 

@@ -1,3 +1,9 @@
+---
+sidebar_position: 1
+title: "Configurations for Enabling Email Notifications"
+description: This page documents the configurations that should be added in order to enable email notifications to the file deployment.toml under <OH_APIM_HOME>/repository/conf.
+---
+
 # Configurations for Enabling Email Notifications
 
 This page documents the configurations that should be added in order to enable email notifications to the file deployment.toml under <OH_APIM_HOME>/repository/conf.
@@ -12,7 +18,7 @@ Email notifications can be enabled for the following events.
 
 This is a required configuration.
 
-```
+```json
 [healthcare.organization]
 org_name = "testOrg"
 contact_email = "support@testorg.com"
@@ -21,7 +27,7 @@ timezone = "GMT"
 
 ### Upon User Registration
 
-```
+```json
 [[healthcare.notification.mail]]
 name = "new_user_signup_requested_internal"
 enable = true
@@ -37,7 +43,7 @@ The values given within '${}' are the default placeholders that will be populate
 
 ### Upon User Approval/Rejection - To Specified Roles and Receipients
 
-```
+```json
 [[healthcare.notification.mail]]
 name = "new_user_signup_completed_internal"
 enable = true
@@ -49,7 +55,7 @@ email_body = "<html><body>Signup request has been ${status} by ${approver}.</bod
 
 ### Upon User Approval/Rejection - To the User
 
-```
+```json
 [[healthcare.notification.mail]]
 name = "new_user_signup_completed_external"
 enable = true
@@ -59,7 +65,7 @@ email_body = "<html><body>Your signup request has been ${status}. Please email $
 
 ### Upon Application Creation
 
-```
+```json
 [[healthcare.notification.mail]]
 name = "new_app_creation_requested_internal"
 enable = true
@@ -71,7 +77,7 @@ email_body = "<html><body>A new application has been created. Visit the <a href=
 
 ### Upon Application Approval/Rejection - To Specified Roles and Receipients
 
-```
+```json
 [[healthcare.notification.mail]]
 name = "new_app_creation_completed_internal"
 enable = true

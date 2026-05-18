@@ -1,3 +1,9 @@
-???+ note
-    WSO2 Healthcare Solution offers **two distinct solutions** (Ballerina and Micro Integrator) each tailored to different architectural preferences. For systems that favor the *Enterprise Service Bus* (ESB) pattern, the <a href="https://wso2.com/micro-integrator/" target="_blank"><b>Micro Integrator</b></a>, enhanced with FHIR accelerators, can be utilized. <br>
-    On the other hand, <a href="https://ballerina.io/" target="_blank"><b>Ballerina</b></a>, a programming language specifically designed for integrations, is ideal for implementing FHIR integrations structured as *microservices*.
+---
+sidebar_position: 1
+title: "Bal MI Note"
+description: These guides use [Ballerina](https://ballerina.io/), a language designed for integration and network services, to build healthcare integrations as microservices.
+---
+
+:::note
+These guides use [Ballerina](https://ballerina.io/), a language designed for integration and network services, to build healthcare integrations as microservices.
+:::

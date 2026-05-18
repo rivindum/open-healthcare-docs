@@ -1,3 +1,9 @@
+---
+sidebar_position: 2
+title: "How to update Healthcare solution?"
+description: Usually Healthcare accelerators are the implementation which accelerate and facilitate the FHIR related features, these accelerators will be applied on top of the wso2 base product.
+---
+
 # How to update Healthcare solution?
 
 Usually Healthcare accelerators are the implementation which accelerate and facilitate the FHIR related features, these accelerators will be applied on top of 
@@ -7,11 +13,11 @@ Inorder to get updates for Healthcare solution we need to get the update for two
 
 * Download the GA/ Vanilla pack of the wso2 base products like APIM or MI.
 * Update the base products to the latest/ desire update level.
-* Download the GA/ Vanilla pack of the WSO2 Healthcare Solution accelerators.
-* Update the WSO2 Healthcare Solution accelerators to the latest/ desire update level.
+* Download the GA/ Vanilla pack of the WSO2 Open Healthcare accelerators.
+* Update the WSO2 Open Healthcare accelerators to the latest/ desire update level.
 * Then apply the accelerators on top of the base products. Please read more about [installation of accelerator](/install-and-setup/manual).
 
-![Update process]({{base_path}}/assets/img/install-and-setup/updates/update-oh-accelerator.png)
+![Update process](/assets/img/install-and-setup/updates/update-oh-accelerator.png)
 
 # Continuous update
 
@@ -20,4 +26,4 @@ We highly recommend that to set up an automation tool like Puppet or Ansible, an
 
 Using this automation you can easily install and test new updates on lower environments, and can propagate to the higher environments like Production.
 
-![Continuous update]({{base_path}}/assets/img/install-and-setup/updates/continuos-update.png)
+![Continuous update](/assets/img/install-and-setup/updates/continuos-update.png)

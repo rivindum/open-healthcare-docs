@@ -1,10 +1,16 @@
+---
+sidebar_position: 6
+title: "Prerequisites"
+description: WSO2 Open Healthcare is a platform designed with API-driven interoperability, seamless and secure health data exchange capabilities.
+---
+
 ## Overview
 
-WSO2 Healthcare Solution is a platform designed with API-driven interoperability, seamless and secure health data exchange capabilities.
+WSO2 Open Healthcare is a platform designed with API-driven interoperability, seamless and secure health data exchange capabilities.
 
 API gateway created with Industry standards, provide readily available API Management capabilities inclusive of a broad spectrum of features that can be leveraged to spin up a fully functional FHIR server in a short period of time.
 
-With WSO2 Healthcare Solution you can easily,
+With WSO2 Open Healthcare you can easily,
 
 - Develop a fully standardized FHIR server with pre-built FHIR API definitions.
     - 100+ OAS definition files are available in WSO2 FHIR API Hub.
@@ -15,26 +21,27 @@ With WSO2 Healthcare Solution you can easily,
 - Allow third-party developers to consume FHIR APIs through the Developer Portal.
 - Using APIM as the API management layer to manage the FHIR API and to expose it to consumers.
 
-WSO2 Healthcare Solution consists of an API Management component that has been developed using WSO2 API Manager as the base product and installing Healthcare related modules using the Healthcare APIM accelerator distribution.
+WSO2 Open Healthcare consists of an API Management component that has been developed using WSO2 API Manager as the base product and installing Healthcare related modules using the Healthcare APIM accelerator distribution.
 
-This section discusses the basic steps and the key concepts of FHIR APIs in the WSO2 Healthcare Solution.
+This section discusses the basic steps and the key concepts of FHIR APIs in the WSO2 Open Healthcare.
 
 ## Prerequisites
 
-- Install and configure WSO2 Healthcare Solution. (Refer: Quick start guide (QSG))
+- Install and configure WSO2 Open Healthcare. (Refer: Quick start guide (QSG))
 - Deployed Integration APIs. (Refer: Setting up Integration)
-    - Note: This has to be an active endpoint which responds to a FHIR payload. Not necessary to be deployed with WSO2 Healthcare Solution.
+    - Note: This has to be an active endpoint which responds to a FHIR payload. Not necessary to be deployed with WSO2 Open Healthcare.
 
 ## Expose the integration as a FHIR API
 
-WSO2 Healthcare Solution allows you to expose an existing FHIR integration service as a managed FHIR REST API.
+WSO2 Open Healthcare allows you to expose an existing FHIR integration service as a managed FHIR REST API.
 
 If you have already built your FHIR integration service, you can follow the steps given below to expose it as a managed API in a standard FHIR server.
 
 1. Download the relevant API definition(OAS) from the WSO2 FHIR API Hub.
-   
-    <img src="../../../assets/img/guildes/exposing-an-api/download-api.png" width="700">
-    <img src="../../../assets/img/guildes/exposing-an-api/oh-publisher-portal.png" width="700">
+
+    ![Download API from FHIR API Hub](/assets/img/guildes/exposing-an-api/download-api.png)
+
+    ![WSO2 Open Healthcare Publisher Portal](/assets/img/guildes/exposing-an-api/oh-publisher-portal.png)
 
 1. Log in to WSO2 OH publisher portal and select [REST API](https://apim.docs.wso2.com/en/latest/design/create-api/create-rest-api/create-a-rest-api-from-an-openapi-definition/](https://apim.docs.wso2.com/en/latest/design/create-api/create-rest-api/create-a-rest-api-from-an-openapi-definition/))
 2. Create an API by clicking **Import Open API** and uploading the OAS file (both JSON and YAML formats are supported.)
@@ -47,23 +54,26 @@ If you have already built your FHIR integration service, you can follow the step
 ## Explore the FHIR API
 
 1. Sign in to Healthcare Developer Portal.
-   <img src="../../../assets/img/guildes/exposing-an-api/oh-developer-portal.png" width="700">
 
-
+    ![WSO2 Open Healthcare Developer Portal](/assets/img/guildes/exposing-an-api/oh-developer-portal.png)
 
 1. Navigate to Applications tab and to create an application, click on **Add New Application** button
     1. An application is a logical representation of a physical application such as a mobile app, web app, device, etc. An API subscription is created, authenticated, and managed through an application. Find out more about applications by clicking [here](https://apim.docs.wso2.com/en/4.1.0/consume/manage-application/create-application]).
-       
-        <img src="../../../assets/img/guildes/exposing-an-api/add-new-application.png" width="700">
+
+        ![Add new application in Developer Portal](/assets/img/guildes/exposing-an-api/add-new-application.png)
 
 1. Subscribe to the respective API/s by clicking the **Subscriptions** Menu
-   <img src="../../../assets/img/guildes/exposing-an-api/subscription.png" width="700">
+
+    ![API subscription](/assets/img/guildes/exposing-an-api/subscription.png)
 
 1. Generate application keys by navigating to the **Production Keys** menu
-   <img src="../../../assets/img/guildes/exposing-an-api/product-key.png" width="700">
+
+    ![Production keys](/assets/img/guildes/exposing-an-api/product-key.png)
 
 1. Click on the **Tryout** menu and add the generated token to Invoke the API
-   <img src="../../../assets/img/guildes/exposing-an-api/tryout.png" width="700">
-    
-    <img src="../../../assets/img/guildes/exposing-an-api/get.png" width="700"><br>
+
+    ![API try-out](/assets/img/guildes/exposing-an-api/tryout.png)
+
+    ![Invoke FHIR API](/assets/img/guildes/exposing-an-api/get.png)
+
 Refer [RESTful FHIR](https://docs.google.com/document/d/1aX9FBCzs36Z3rBe1ImhG83J2w1PjwFviAf1dIdE9zTs/edit#heading=h.o3o4782vln88) documentation for more details.

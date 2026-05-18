@@ -1,0 +1,45 @@
+name: WSO2 Open Healthcare Docs Publish
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release-wso2-open-healthcare-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          # Full history so showLastUpdateTime can read per-file git dates.
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: en/package-lock.json
+
+      - name: Install dependencies
+        run: |
+          cd en/
+          npm ci
+
+      - name: Build Docusaurus site
+        run: |
+          cd en/
+          npm run build
+        env:
+          BASE_URL: /open-healthcare-docs/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: en/build

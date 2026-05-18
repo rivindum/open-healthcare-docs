@@ -1,3 +1,9 @@
+---
+sidebar_position: 2
+title: "Key Features of EMR Systems"
+description: Electronic Medical Record (EMR) Systems are primarily used to manage and store patient information within a single healthcare practice or facility.
+---
+
 Electronic Medical Record (EMR) Systems are primarily used to manage and store patient information within a single healthcare practice or facility. EMRs focus on documenting a patient’s medical history, diagnoses, treatment plans, and other relevant clinical data over time, making it easier for healthcare providers to deliver care and track patient progress.
 
 ## Key Features of EMR Systems
