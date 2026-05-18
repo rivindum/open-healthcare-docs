@@ -21,7 +21,7 @@ In a FHIR facade implementation, populating FHIR resources is a critical step th
     2. Import the required modules to the Ballerina program. In this sample we are using FHIR Patient resource from international base FHIR IG . Therefore, we need to import `ballerinax/health.fhir.r4.internationa401` package. If you are using a different IG of FHIR, you can import the relevant package from the [central](https://central.ballerina.io/search?q=fhir&page=1&m=packages) or generated from the bal [health tool](https://ballerina.io/learn/health-tool/#package-generation).
     
         ```ballerina
-        import ballerinax/health.fhir.r4.internationa401;
+        import ballerinax/health.fhir.r4.international401;
         import ballerina/io;
         ```    
     3. Create a custom patient record type to represent the patient data. In this sample, the patient record contains the patient's first name, last name, address, and phone number.
