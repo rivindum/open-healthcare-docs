@@ -16,7 +16,7 @@
 
 # Project information
 site_name: Healthcare Solution Documentation
-site_description: Documentation for WSO2 Healthcare Solution Accelerator
+site_description: Documentation for WSO2 Open Healthcare Accelerator
 site_author: WSO2
 site_url: https://oh.docs.wso2.com/en/latest/
 
@@ -26,7 +26,7 @@ repo_url: https://github.com/wso2/open-healthcare-docs
 edit_uri: https://github.com/wso2/open-healthcare-docs/edit/main-new/en/docs/
 
 # Copyright
-copyright: WSO2 Healthcare Solution - Documentation
+copyright: WSO2 Open Healthcare - Documentation
 
 # Configuration
 theme:
@@ -101,7 +101,7 @@ nav:
         - Populating HL7 messages: hl7/guides/populating-hl7-message.md
         - Parsing and Serializing: hl7/guides/parsing-and-serializing.md
         # - Validation: hl7/guides/validation.md
-        # - Custom HL7 messages: hl7/guides/custom-hl7-message.md
+        # - Customizing HL7 Messagess: hl7/guides/custom-hl7-message.md
       - Connecting to HL7 Servers: 
         - Connect to HL7 TCP servers: hl7/guides/connect-to-hl7-tcp-servers.md
         - Connect to HL7 File servers: hl7/guides/connect-to-hl7-file-servers.md

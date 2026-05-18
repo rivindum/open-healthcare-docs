@@ -1,3 +1,9 @@
+---
+sidebar_position: 3
+title: "What is the Update Tool?"
+description: Update tool is a CLI distribution that is separate for Linux, macOS and Windows distributions.
+---
+
 ## What is the Update Tool?
 Update tool is a CLI distribution that is separate for Linux, macOS and Windows distributions. 
 Bringing your product up to date with the Update Tool is very easy. 

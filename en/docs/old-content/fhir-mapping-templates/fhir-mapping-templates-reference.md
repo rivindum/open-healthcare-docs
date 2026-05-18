@@ -1,3 +1,9 @@
+---
+sidebar_position: 3
+title: "References"
+description: Resource template structure will look like follows.
+---
+
 # References
 
 ## FHIR Template Features

@@ -1,3 +1,9 @@
+---
+sidebar_position: 1
+title: "Updating wso2 products"
+description: WSO2 Updates include improvements that are released by WSO2, on top of a released WSO2 product version.
+---
+
 # Updating wso2 products
 ## What are WSO2 Updates?
 WSO2 Updates include improvements that are released by WSO2, on top of a released WSO2 product version. 

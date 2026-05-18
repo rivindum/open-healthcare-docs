@@ -1,3 +1,9 @@
+---
+sidebar_position: 12
+title: "Working with FHIR"
+description: HL7 FHIR (Fast Healthcare Interoperability Resources) is a standard for exchanging healthcare information electronically.
+---
+
 # Working with FHIR
 
 ## Overview
@@ -12,12 +18,14 @@ The key features of the FHIR specification are:
 5. **Support for Multiple Formats**: FHIR supports data representation in JSON, XML, and RDF formats, making it compatible with various systems and easier to work with in different programming environments.
 6. **Security**: FHIR incorporates standard security protocols, including OAuth2 and SMART on FHIR, to ensure that patient data is securely accessed and shared.
 
-WSO2 Healthcare provides a comprehensive set of features/tools to support the FHIR-based digital transformation and compliance needs of any payer, provider, or related business.
+WSO2 Open Healthcare provides a comprehensive set of features/tools to support the FHIR-based digital transformation and compliance needs of any payer, provider, or related business.
 
-{!includes/bal-mi-note.md!}
+:::note
+These guides use [Ballerina](https://ballerina.io/), a language designed for integration and network services, to build healthcare integrations as microservices.
+:::
 
 
-Follow the guides below to learn how to work with FHIR in WSO2 Healthcare solution:
+Follow the guides below to learn how to work with FHIR in WSO2 Open Healthcare:
 
 - [Populating FHIR resources](../../fhir/guides/populating-fhir-resources.md)
 - [Parsing and Serializing](../../fhir/guides/parsing-and-serializing.md)

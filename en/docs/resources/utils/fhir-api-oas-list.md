@@ -1,3 +1,9 @@
+---
+sidebar_position: 1
+title: "FHIR API OpenAPI Definitions"
+description: Below is the list of FHIR APIs available to download in OAS format.
+---
+
 # FHIR API OpenAPI Definitions
 
 Below is the list of FHIR APIs available to download in OAS format.

@@ -1,1 +1,0 @@
-# FHIR provider directory API

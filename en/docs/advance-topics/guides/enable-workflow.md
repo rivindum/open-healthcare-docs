@@ -1,3 +1,9 @@
+---
+sidebar_position: 1
+title: "Adding User and Application Creation Workflow"
+description: Attaching a custom workflow to the user and application creation processes allows admin users to manage these actions more effectively by providing an option to approve or reject each creation request.
+---
+
 # Adding User and Application Creation Workflow
 Attaching a custom workflow to the user and application creation processes allows admin users to manage these actions more effectively by providing an option to approve or reject each creation request. This ensures that user and application creation is fully controlled and monitored by administrators.
 
@@ -10,7 +16,7 @@ Healthcare accelerator provides the following capabilities.
 
 ## How to enable the User/Application creation workflow 
 1. Follow the [Installation Steps](../../install-and-setup/manual.md) to install the Healthcare APIM Accelerator. 
-2. After extracting WSO2 Healthcare APIM Accelerator to `<WSO2_APIM_HOME>`, navigate to `<WSO2_OH_APIM_ACC_HOME>`/conf/config.toml file, and enable the following configuration. 
+2. After extracting WSO2 Open Healthcare APIM Accelerator to `<WSO2_APIM_HOME>`, navigate to `<WSO2_OH_APIM_ACC_HOME>`/conf/config.toml file, and enable the following configuration. 
 ```
 enable_developer_workflow = true
 ```
@@ -22,7 +28,7 @@ merge.sh
 5. Sign in to WSO2 APIM Management Console (https://`<Server-Host>`:9443/carbon) through the web browser as the admin. 
 6. Navigate to  Resources -> Browse and go to /_system/governance/apimgt/applicationdata/workflow-extensions.xml in the edit mode. (Edit as text)
 7. Enable Approval Workflow Executor for user and application creation. 
-```
+```xml
 <UserSignUp executor="org.wso2.healthcare.apim.workflow.extensions.OpenHealthcareUserSignUpApprovalWorkflowExecutor"/>
 <ApplicationCreation executor="org.wso2.healthcare.apim.workflow.extensions.OpenHealthcareApplicationCreationApprovalWorkflowExecutor"/>
 ```
@@ -30,14 +36,14 @@ merge.sh
 
 ## Testing the user creation flow
 1. Navigate to Dev portal (https://localhost:9443/devportal) and self signup a user. 
-![selfsignup](../../assets/img/learn/workflow/selfsignup.png)
+![selfsignup](/assets/img/learn/workflow/selfsignup.png)
 
 2. Once the user creation is successful, this request will be displayed in the Admin Portal for admins to approve. Without the approval of the Admin, users are not permitted to login. 
 
 3. Sign in to the Admin Portal (https://localhost:9443/admin) and click on '**User Creation**'. 
 
 3. The user creation request is displayed in the Admin Portal for admins to approve. 
-![user creation request](../../assets/img/learn/workflow/user-creation-approval.png)
+![user creation request](/assets/img/learn/workflow/user-creation-approval.png)
 
 4. Once admin approves the request, the user should be able to login to the Devportal. 
 
@@ -46,5 +52,5 @@ merge.sh
 2. Since the application creation flow is enabled, initially application will remain as inactive until it gets approved. 
 3. Login to the Admin Portal (https://localhost:9443/admin) and click on '**Application Creation**'. 
 4. The application creation request is displyed in the Admin Portal for Admin user to approve/reject. 
-![application creation request](../../assets/img/learn/workflow/application-creation-approval.png)
+![application creation request](/assets/img/learn/workflow/application-creation-approval.png)
 5. Once the application creation request is approved, user should be able to use the application as it becomes active. 
