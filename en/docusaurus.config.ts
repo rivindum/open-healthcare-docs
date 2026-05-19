@@ -2,12 +2,20 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const baseUrl = process.env.BASE_URL || '/';
+
+function staticAsset(path: string): string {
+  const normalizedBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+  const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${normalizedBase}${normalizedPath}`;
+}
+
 const config: Config = {
   title: 'Healthcare Solution Documentation',
   tagline: 'Documentation for WSO2 Open Healthcare Accelerator',
   favicon: 'img/favicon.svg',
   url: 'https://oh.docs.wso2.com',
-  baseUrl: process.env.BASE_URL || '/',
+  baseUrl,
   organizationName: 'wso2',
   projectName: 'open-healthcare-docs',
   onBrokenLinks: 'warn',
@@ -35,18 +43,18 @@ const config: Config = {
     ],
   ],
   stylesheets: [
-    '/assets/css/ohtheme.css',
-    '/assets/css/blue-palette-alt1.css',
-    '/assets/css/config-catalog.css',
-    '/assets/css/redoc.css',
-    '/assets/lib/highlightjs/styles/vs.min.css',
-    '/assets/lib/json-formatter/json-formatter.css',
-    '/assets/lib/fontawesome-free-6.3.0-web/css/all.min.css',
+    staticAsset('/assets/css/ohtheme.css'),
+    staticAsset('/assets/css/blue-palette-alt1.css'),
+    staticAsset('/assets/css/config-catalog.css'),
+    staticAsset('/assets/css/redoc.css'),
+    staticAsset('/assets/lib/highlightjs/styles/vs.min.css'),
+    staticAsset('/assets/lib/json-formatter/json-formatter.css'),
+    staticAsset('/assets/lib/fontawesome-free-6.3.0-web/css/all.min.css'),
   ],
   scripts: [
-    '/assets/lib/highlightjs/highlight.min.js',
-    '/assets/lib/json-formatter/json-formatter.umd.js',
-    '/assets/js/ohtheme.js',
+    staticAsset('/assets/lib/highlightjs/highlight.min.js'),
+    staticAsset('/assets/lib/json-formatter/json-formatter.umd.js'),
+    staticAsset('/assets/js/ohtheme.js'),
   ],
   themeConfig: {
     image: 'img/logo.svg',
