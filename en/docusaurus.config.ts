@@ -34,6 +34,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/wso2/open-healthcare-docs/edit/main/en/',
           showLastUpdateTime: true,
+          exclude: ['**/old-content/**'],
         },
         blog: false,
         theme: {

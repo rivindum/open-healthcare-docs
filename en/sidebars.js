@@ -15,10 +15,14 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'FHIR',
+      label: 'Working with FHIR',
       link: { type: 'doc', id: 'fhir/guides/overview-of-fhir' },
       items: [
-        'fhir/guides/overview-of-fhir',
+        {
+          type: 'doc',
+          id: 'fhir/guides/overview-of-fhir',
+          label: 'Overview of FHIR',
+        },
         {
           type: 'category',
           label: 'Handling FHIR Resources',
@@ -33,30 +37,51 @@ const sidebars = {
         {
           type: 'category',
           label: 'Connecting to FHIR Repositories',
-          items: ['fhir/guides/fhir-repository-connector'],
+          items: [
+            {
+              type: 'doc',
+              id: 'fhir/guides/fhir-repository-connector',
+              label: 'Using FHIR Repository connector',
+            },
+          ],
         },
         {
           type: 'category',
           label: 'Build your own Facade',
           items: [
-            'fhir/guides/fhir-resource-api-template',
-            'fhir/guides/metadata-api',
+            {
+              type: 'doc',
+              id: 'fhir/guides/fhir-resource-api-template',
+              label: 'Developing FHIR APIs',
+            },
           ],
         },
       ],
     },
     {
       type: 'category',
-      label: 'HL7',
+      label: 'Working with HL7',
       link: { type: 'doc', id: 'hl7/guides/overview' },
       items: [
-        'hl7/guides/overview',
+        {
+          type: 'doc',
+          id: 'hl7/guides/overview',
+          label: 'Overview of HL7v2',
+        },
         {
           type: 'category',
           label: 'Handling HL7 Messages',
           items: [
-            'hl7/guides/populating-hl7-message',
-            'hl7/guides/parsing-and-serializing',
+            {
+              type: 'doc',
+              id: 'hl7/guides/populating-hl7-message',
+              label: 'Populating HL7 messages',
+            },
+            {
+              type: 'doc',
+              id: 'hl7/guides/parsing-and-serializing',
+              label: 'Parsing and Serializing',
+            },
           ],
         },
         {
@@ -70,10 +95,14 @@ const sidebars = {
         {
           type: 'category',
           label: 'Build your own HL7 server',
-          items: ['hl7/guides/hl7-server-listener'],
+          items: [
+            {
+              type: 'doc',
+              id: 'hl7/guides/hl7-server-listener',
+              label: 'HL7 server listener',
+            },
+          ],
         },
-        'hl7/guides/validation',
-        'hl7/guides/custom-hl7-message',
       ],
     },
     {

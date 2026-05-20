@@ -51,7 +51,7 @@ Below are the key steps involved in launching a SMART app and gaining access to 
 
     With the access token in hand, the app makes API requests to the EHR’s FHIR server. For example:
 
-    - GET /Patient/{id} to retrieve a patient’s demographics.
-    - GET /Observation?patient={id} to access lab results.
+    - `GET /Patient/{id}` to retrieve a patient’s demographics.
+    - `GET /Observation?patient={id}` to access lab results.
 
     Each API request includes the access token in the HTTP header (Authorization: Bearer ACCESS_TOKEN).

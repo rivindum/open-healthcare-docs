@@ -6,9 +6,6 @@ on:
       - main
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
   release-wso2-open-healthcare-docs:
     runs-on: ubuntu-latest
@@ -34,7 +31,7 @@ jobs:
         run: npm run build
         working-directory: en
         env:
-          BASE_URL: /${{ github.event.repository.name }}/
+          BASE_URL: /open-healthcare-docs/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

@@ -80,4 +80,4 @@ You may map other container service ports, which have been exposed to Docker hos
 - To access the management console, use the docker host IP and port 9443.
     + `https://<DOCKER_HOST>:9443/carbon`
 
-> In here, <DOCKER_HOST> refers to hostname or IP of the host machine on top of which containers are spawned.
+> In here, `<DOCKER_HOST>` refers to hostname or IP of the host machine on top of which containers are spawned.

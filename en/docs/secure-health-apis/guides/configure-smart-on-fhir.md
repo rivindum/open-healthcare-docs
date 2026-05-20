@@ -10,7 +10,7 @@ In this example, we will walk through the steps to configure a SMART App Launch 
 
 ## Prerequisites
 1. Intall the latest WSO2 API Manager version and install the [WSO2 Open Healthcare Accelerator](../../install-and-setup/manual.md).
-2. Start the WSO2 API Manager server by navigating to <APIM_HOME>/bin directory and executing this command. 
+2. Start the WSO2 API Manager server by navigating to `<APIM_HOME>`/bin directory and executing this command.
 ```bash
 ./api-manager.sh
 ```
