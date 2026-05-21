@@ -20,12 +20,12 @@ Before you begin, ensure you have <a href="https://ballerina.io/downloads/instal
 
 ## Step 2: Implement the flow to populate a FHIR resource
 
-1. Create ballerina project using the following command. It will create the ballerina project and the main.bal file can be used to implement the logic.
+1. Create a Ballerina project using the following command. It will create the Ballerina project and the main.bal file can be used to implement the logic.
 
     ```bash
     $ bal new fhir_resource_populate_sample
     ```
-2. Import the required modules to the Ballerina program. In this sample we are using FHIR Patient resource from international base FHIR IG . Therefore, we need to import `ballerinax/health.fhir.r4.internationa401` package. If you are using a different IG of FHIR, you can import the relevant package from the [central](https://central.ballerina.io/search?q=fhir&page=1&m=packages) or generated from the bal [health tool](https://ballerina.io/learn/health-tool/#package-generation).
+2. Import the required modules to the Ballerina program. In this sample we are using FHIR Patient resource from international base FHIR IG. Therefore, we need to import `ballerinax/health.fhir.r4.international401` package. If you are using a different IG of FHIR, you can import the relevant package from the [central](https://central.ballerina.io/search?q=fhir&page=1&m=packages) or generated from the bal [health tool](https://ballerina.io/learn/health-tool/#package-generation).
 
     ```ballerina
     import ballerinax/health.fhir.r4.internationa401;

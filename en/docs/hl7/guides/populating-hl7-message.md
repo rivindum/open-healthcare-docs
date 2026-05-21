@@ -21,7 +21,7 @@ Before you begin, ensure you have <a href="https://ballerina.io/downloads/instal
 
 ## Step 2: Implement the flow to populate the HL7 message
 
-1. Create ballerina project using the following command. It will create the ballerina project and the main.bal file can be used to implement the logic.
+1. Create a Ballerina project using the following command. It will create the Ballerina project and the main.bal file can be used to implement the logic.
 
     ```bash
     $ bal new hl7_message_populate_sample

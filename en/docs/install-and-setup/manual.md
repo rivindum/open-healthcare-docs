@@ -83,7 +83,7 @@ Mon May 31 22:01:55 +0530 2021 - john - WSO2 Open Healthcare API Manager 1.0.0 A
 :::
 ### Product Compatibilities
 
-| Product          | Compatible Healthcare Accelarator  |
+| Product          | Compatible Healthcare Accelerator  |
 |---------------------------|-----------------------------------------|
 |<center>APIM 4.2.0</center>|<center>[APIM HC Accelerator 1.0.0](https://github.com/wso2/healthcare-accelerator/releases/tag/v1.0.0)</center>                           |
 

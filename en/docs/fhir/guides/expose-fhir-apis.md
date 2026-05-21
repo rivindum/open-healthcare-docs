@@ -55,10 +55,10 @@ Please note that there are areas that WSO2 Open Healthcare does not support at t
 
 Once the required FHIR resources have been exposed as FHIR APIs, the server is ready to go as a standard FHIR server. That is, all the subordinate components are getting updated and deployed accordingly.
 
-To learn more about RESTful FHIR, refer the [official FHIR documentation](https://www.hl7.org/fhir/http.html).
+To learn more about RESTful FHIR, refer to the [official FHIR documentation](https://www.hl7.org/fhir/http.html).
 
 - Interactions
-    - Instance level - All the instance level interactions are pre templeted in the API definitions of the WSO2 FHIR API Hub. Relevant backend integration logic has to be implemented by the developer. (A project skeleton with boilerplate code will be provided to speed up the deployment.)
+    - Instance level - All the instance level interactions are pre-templated in the API definitions of the WSO2 FHIR API Hub. Relevant backend integration logic has to be implemented by the developer. (A project skeleton with boilerplate code will be provided to speed up the deployment.)
     - Type level - Type level interactions are also handled in a similar manner as in Instance level interactions.
     - System level - Only Capabilities interaction is available as a default feature.
 - Capability statement
@@ -80,7 +80,7 @@ To learn more about RESTful FHIR, refer the [official FHIR documentation](https:
 | **Feature** | **Supported? (yes/no/partially)** | **Description** |
 | --- | --- | --- |
 | read | yes | Supports query parameters as well |
-| vread | yes | Appropriate Integration logic has to be implemented by the Integration developer. (Since versioning strategy might different from one system to a another) |
+| vread | yes | Appropriate Integration logic has to be implemented by the Integration developer. (Since versioning strategy might differ from one system to another) |
 | update | yes | Appropriate Integration logic has to be implemented by the Integration developer. |
 | patch | yes | Appropriate Integration logic has to be implemented by the Integration developer. |
 | delete | yes | |

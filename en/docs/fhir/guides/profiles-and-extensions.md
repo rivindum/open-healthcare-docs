@@ -76,7 +76,7 @@ Run the Ballerina program using the following command:
     ```
 
 :::info
-The Ballerina CLI is designed to accommodate domain-specific tools, one of which is the Ballerina [Health tool](https://ballerina.io/learn/health-tool/). This specialized tool enables the generation of a Ballerina FHIR package, which includes Ballerina record representations of FHIR resources and project templates tailored for any custom set of FHIR structure definitions. These definitions can encompass FHIR profiles, extended FHIR resources, and more. The generated Ballerina FHIR packages can be pushed to Ballrina Central and then imported into your Ballerina project, providing access to the FHIR resources and extensions defined in the package.
+The Ballerina CLI is designed to accommodate domain-specific tools, one of which is the Ballerina [Health tool](https://ballerina.io/learn/health-tool/). This specialized tool enables the generation of a Ballerina FHIR package, which includes Ballerina record representations of FHIR resources and project templates tailored for any custom set of FHIR structure definitions. These definitions can encompass FHIR profiles, extended FHIR resources, and more. The generated Ballerina FHIR packages can be pushed to Ballerina Central and then imported into your Ballerina project, providing access to the FHIR resources and extensions defined in the package.
 :::
 ![FHIRBase connector](/assets/img/guildes/handling-fhir/fhir-base-connector.png)
 

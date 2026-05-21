@@ -37,7 +37,7 @@ Below are the key steps involved in launching a SMART app and gaining access to 
 
 2. Retrieve .well-known/smart-configuration
 
-    The app retrieves the EHR’s .well-known/smart-configuration file to obtain OAuth 2.0 endpoints (authorization and token endpointss) and discover supported scopes and other relevant data for authorization. This step ensures the app interacts with the correct endpoints for secure access.
+    The app retrieves the EHR’s .well-known/smart-configuration file to obtain OAuth 2.0 endpoints (authorization and token endpoints) and discover supported scopes and other relevant data for authorization. This step ensures the app interacts with the correct endpoints for secure access.
 
 3. Obtain Authorization Code
 

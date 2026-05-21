@@ -43,7 +43,7 @@ This is a required configuration.
 <strong>Note:</strong>The values given within '${}' are the default placeholders that will be populated internally.
 
 :::
-### Upon User Approval/Rejection - To Specified Roles and Receipients
+### Upon User Approval/Rejection - To Specified Roles and Recipients
 
 ```json
     [[healthcare.notification.mail]]
@@ -77,7 +77,7 @@ This is a required configuration.
     email_body = "<html><body>A new application has been created. Visit the <a href=\"${server_url}/admin/tasks/application-creation/\">admin portal</a> to approve/reject.</body></html>"
 ```
 
-### Upon Application Approval/Rejection - To Specified Roles and Receipients
+### Upon Application Approval/Rejection - To Specified Roles and Recipients
 
 ```json
     [[healthcare.notification.mail]]

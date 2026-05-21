@@ -16,7 +16,7 @@ Follow the guides below to learn how to work with HL7 messages in WSO2 Open Heal
 
   - [Populating HL7 messages](../../hl7/guides/populating-hl7-message.md)
   - [Parsing and Serializing](../../hl7/guides/parsing-and-serializing.md)
-  - [Customizing HL7 Messagess](../../hl7/guides/custom-hl7-message.md)
+  - [Customizing HL7 Messages](../../hl7/guides/custom-hl7-message.md)
   - [Connect to HL7 TCP servers](../../hl7/guides/connect-to-hl7-tcp-servers.md)
   - [Connect to HL7 File servers](../../hl7/guides/connect-to-hl7-file-servers.md)
   - [HL7 server listener](../../hl7/guides/hl7-server-listener.md)

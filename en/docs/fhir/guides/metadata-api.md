@@ -94,14 +94,14 @@ Following configurations need to be added in a `Config.toml` or in the Choreo co
 | `patchFormat`                | Patch formats supported <br/><br/> eg: `[application/json-patch+json]`                             | 
 | `implementationUrl`          | Base URL for the installation <br/><br/> eg: `https://choreoapis/dev/fhir_server/0.1.5`            |
 | `implementationDescription`  | Describes this specific instance <br/><br/> eg: `WSO2 Open Healthcare FHIR`                        |  
-| `interaction`                | The that operations are supported <br/><br/> eg: `[search-system, history-system]`                 | 
+| `interaction`                | The operations that are supported <br/><br/> eg: `[search-system, history-system]`                 | 
 | `cors`                       | CORS Headers availability <br/><br/> eg: `true`                                                    |
 | `discoveryEndpoint`          | The discovery endpoint for the server <br/><br/> eg: `https://api.asgardeo.io/t/<organization_name>/oauth2/token/.well-known/openid-configuration` |
 | `tokenEndpoint`              | OPTIONAL: If not provided a discoveryEndpoint. <br/>OAUTH2 access token url <br/><br/> eg: `https://api.asgardeo.io/t/<organization_name>/oauth2/token`          | 
 | `revocationEndpoint`         | OPTIONAL: If not provided a discoveryEndpoint. <br/>OAUTH2 access revoke url <br/><br/> eg: `https://api.asgardeo.io/t/<organization_name>/oauth2/revoke`        | 
 | `authorizeEndpoint`          | OPTIONAL: If not provided a discoveryEndpoint. <br/>OAUTH2 access authorize url <br/><br/> eg: `https://api.asgardeo.io/t/<organization_name>/oauth2/authorize`  |
 
-A sample `Config.toml` is consisting above configurations as below.
+A sample `Config.toml` containing the above configurations is shown below.
 
     ```
     ## server related configurables
@@ -222,7 +222,7 @@ This creates the organization and opens the Project Home page of the default pro
 
     Follow the official documentation to deploy the smart configuration prebuilt service to your organization https://wso2.com/choreo/docs/develop-components/develop-services/develop-a-ballerina-rest-api/#step-2-build-and-deploy.
 
-    On deployment configurables mentioned in [Configurations](#configurations) needs to be configured in Choreo configurable editor.
+    On deployment, configurables mentioned in [Configurations](#configurations) need to be configured in the Choreo configurable editor.
 
 ## Configurations
 
@@ -246,7 +246,7 @@ Following configurations need to be added in a `Config.toml` or in the Choreo co
 | `capabilities`                          | REQUIRED, Array of strings representing SMART capabilities (e.g., sso-openid-connect or launch-standalone) that the server supports. <br/><br/> eg: `[launch-ehr, permission-patient, permission-v2, client-public, client-confidential-symmetric, context-ehr-patient, sso-openid-connect, launch-standalone, context-standalone-patient, permission-offline]`                                                                                           |
 | `codeChallengeMethodsSupported`      | REQUIRED, Array of PKCE code challenge methods supported. The S256 method SHALL be included in this list, and the plain method SHALL NOT be included in this list. <br/><br/> eg: `[S256]`    
 
-A sample `Config.toml` is consisting above configurations as below.
+A sample `Config.toml` containing the above configurations is shown below.
 
 ```json
     [configs]

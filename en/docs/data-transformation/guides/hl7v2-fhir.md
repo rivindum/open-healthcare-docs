@@ -220,11 +220,11 @@ The service processes incoming POST requests containing HL7v2 messages. When a m
 
 Let's look into the the detailed implementation of this. Let's assume the [custom-service-openapi.yaml](../references/custom-service-openapi.yaml) is inside the resources folder. 
 
-1. Genarate the files using openapi files as below. 
+1. Generate the files using openapi files as below. 
 ```bash
 bal openapi -i resources/custom-service-openapi.yaml --mode service -o <OUTPUT-FOLDER>
 ```
-2. They types.bal file is auto generated to the specified folder and it does not need any changes to be done. 
+2. The types.bal file is auto generated to the specified folder and it does not need any changes to be done. 
 3. Update the custom-service-openapi-service.bal file as below. 
 ```ballerina
 // AUTO-GENERATED FILE.
