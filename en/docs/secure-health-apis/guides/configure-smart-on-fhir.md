@@ -97,4 +97,4 @@ curl --location --request POST 'https://localhost:9443/oauth2/token?grant_type=a
 --header 'Authorization: Basic <base64>(CONSUMER_KEY:CONSUMER_SECRET)'
 ```
 5. You will get the access_token along with the id_token. 
-6. By decoding the id_token you will be able to retrieve the Patient Id that we assigned to user 'johndoe'. 
+6. By decoding the id_token, you will be able to retrieve the Patient ID that we assigned to the user 'johndoe'.

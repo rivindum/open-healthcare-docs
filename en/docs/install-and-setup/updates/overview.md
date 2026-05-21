@@ -12,8 +12,7 @@ With updates, you do not have to wait until the next product version release to 
 Read more about [WSO2 latest update tool](https://updates.docs.wso2.com/en/latest/updates/overview/).
 
 ## How to get WSO2 updates?
-A subscription is mandatory to get WSO2 updates. A Subscription can be obtained by different ways and there are different
-types of subscription tiers available.
+A subscription is required to receive WSO2 updates. Subscriptions are available in different tiers to suit your requirements.
 
 Read more about [WSO2 subscription model](https://updates.docs.wso2.com/en/latest/updates/overview/#how-to-get-wso2-updates)
 

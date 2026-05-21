@@ -39,7 +39,7 @@ These FHIR templates are auto-generated from FHIR specification, and we can gene
 
 #### FHIR API Definitions
 
-FHIR defines a RESTful API interface to any [FHIR resource](https://hl7.org/fhir/http.html). We built another tool to automatically generate the Open API Specification 3.0 based API definition files for any FHIR profile or an implementation guide. These API definitions can be imported to the API designer of WSO2 in order to expose respective FHIR APIs.
+FHIR defines a RESTful API to any [FHIR resource](https://hl7.org/fhir/http.html). We built another tool to automatically generate the OpenAPI Specification 3.0-based API definition files for any FHIR profile or an implementation guide. These API definitions can be imported to the API designer of WSO2 in order to expose respective FHIR APIs.
 
 #### Security and Privacy
 

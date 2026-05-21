@@ -58,8 +58,8 @@ Once the required FHIR resources have been exposed as FHIR APIs, the server is r
 To learn more about RESTful FHIR, refer to the [official FHIR documentation](https://www.hl7.org/fhir/http.html).
 
 - Interactions
-    - Instance level - All the instance level interactions are pre-templated in the API definitions of the WSO2 FHIR API Hub. Relevant backend integration logic has to be implemented by the developer. (A project skeleton with boilerplate code will be provided to speed up the deployment.)
-    - Type level - Type level interactions are also handled in a similar manner as in Instance level interactions.
+    - Instance-level - All the instance-level interactions are pre-templated in the API definitions of the WSO2 FHIR API Hub. Relevant backend integration logic has to be implemented by the developer. (A project skeleton with boilerplate code will be provided to speed up the deployment.)
+    - Type level - Type-level interactions are also handled in a similar manner as in instance-level interactions.
     - System level - Only Capabilities interaction is available as a default feature.
 - Capability statement
     - This document describes the server's meta information so that the stakeholders can query and decide whether the server supports expected operation/interaction. This includes all the implemented FHIR resource APIs, search parameters of each FHIR resource, supported interactions and expected payload structures etc.
