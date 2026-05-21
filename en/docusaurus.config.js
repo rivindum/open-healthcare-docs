@@ -34,6 +34,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/wso2/open-healthcare-docs/edit/main/en/',
           showLastUpdateTime: true,
+          exclude: ['**/old-content/**'],
           rehypePlugins: [[rehypeFixAssetImages, {baseUrl}]],
         },
         blog: false,
