@@ -128,7 +128,7 @@ fhir:FHIRResponse|fhir:FHIRError byId = fhirConnector->update({"resourceType": "
 
 :::
 :::note Patch FHIR resource
-This method will allow the user to create a new current version for an existing resource by updating part of the resource.For we only support [FHIRPath Patch](https://hl7.org/FHIR/fhirpatch.html), the remaining content types will be supported in the future releases.
+This method will allow the user to create a new current version for an existing resource by updating part of the resource. Currently only [FHIRPath Patch](https://hl7.org/FHIR/fhirpatch.html) is supported; the remaining content types will be supported in future releases.
 
 | Method name     | getByVersion                                                                                                                                          |
 |:----------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -172,7 +172,7 @@ This method will allow the user to retrieve the change history for a particular 
 |                 | *Parameters* - history search parameters (i.e count, since, at)                                                            |
 |                 | *returnMimeType* - The [Mime Type](https://www.hl7.org/fhir/http.html#mime-type:~:text=Content%20Types%20and%20encodings) of the return response |
 |                 | uriParameters - additional [params](https://www.hl7.org/fhir/http.html#history:~:text=_format%20parameter%2C%20the-,parameters,-to%20this%20interaction) as a name value map |
-| Returns         | Requesed histories \| operationOutcomee                                                                                  |
+| Returns         | Requested histories \| operationOutcome                                                                                  |
 | Server endpoint | [History](https://www.hl7.org/fhir/http.html#history) operation                                                                                                                                   |   
 
 **sample usage**
@@ -184,7 +184,7 @@ fhir:FHIRResponse|fhir:FHIRError byId = fhirConnector->getInstanceHistory("Patie
 ### Type Level Interactions
 
 :::note Create FHIR resource
-This method will allow the user to create a  new for a specified type. Here the user doesn't have control over the resource ID, it will be assigned by the server.
+This method will allow the user to create a new resource for a specified type. Here the user doesn't have control over the resource ID, it will be assigned by the server.
 
 | Method name     | create                                                                                                                                          |
 |:----------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -230,7 +230,7 @@ This method will allow the user to retrieve the change history for a particular 
 | Parameters      | *type* - The name of a resource type (e.g. "Patient")
 |                 | *Parameters* - history search parameters (i.e count, since, at) |
 |                 | *returnMimeType* - The [Mime Type](https://www.hl7.org/fhir/http.html#mime-type:~:text=Content%20Types%20and%20encodings) of the return response |
-| Returns         | Requesed histories \| operationOutcome                                                                                  |
+| Returns         | Requested histories \| operationOutcome                                                                                  |
 | Server endpoint | [History](https://www.hl7.org/fhir/http.html#history) operation   |
 
 **sample usage**
@@ -265,7 +265,7 @@ This method will allow the user to retrieve the change history for all resources
 |:----------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
 | Parameters      | *Parameters* - history search parameters (i.e count, since, at) |
 |                 | *returnMimeType* - The [Mime Type](https://www.hl7.org/fhir/http.html#mime-type:~:text=Content%20Types%20and%20encodings) of the return response |
-| Returns         | Requesed histories \| operationOutcome                                                                                  |
+| Returns         | Requested histories \| operationOutcome                                                                                  |
 | Server endpoint | [History](https://www.hl7.org/fhir/http.html#history) operation   |
 
 **sample usage**

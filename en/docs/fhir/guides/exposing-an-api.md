@@ -17,7 +17,7 @@ With WSO2 Open Healthcare you can easily,
     - Readily available across different Implementation guides.
     - Rapid development tools to support any Implementation.
 - Expose existing FHIR APIs in a dedicated API marketplace (Developer Portal).
-- Build a custom integration flows to transform legacy data formats into FHIR resources, and expose them as FHIR APIs.
+- Build custom integration flows to transform legacy data formats into FHIR resources, and expose them as FHIR APIs.
 - Allow third-party developers to consume FHIR APIs through the Developer Portal.
 - Using APIM as the API management layer to manage the FHIR API and to expose it to consumers.
 

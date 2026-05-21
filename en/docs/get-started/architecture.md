@@ -4,11 +4,11 @@ title: "Accelerators"
 description: WSO2 Open Healthcare is a solution built to leverage development of the Healthcare products to be easier and faster.
 ---
 
-#Architecture and key components
+# Architecture and key components
 
 WSO2 Open Healthcare is a solution built to leverage development of the Healthcare products to be easier and faster. It reiterates one of the main problems the healthcare industry is facing that is interoperability. The Healthcare solution is built on a novel approach to support healthcare interoperability through the widely-recognized Fast Healthcare Interoperability Resources (FHIR) standards. We provide several healthcare accelerators to speedup the development process and significantly improve the go-to-market time.
 
-The diagram below depicts of what the WSO2 Open Healthcare offers.
+The diagram below depicts what the WSO2 Open Healthcare offers.
 
 ![WSO2 Open Healthcare Architecture](/assets/img/get-started/healthcare-architecture.png)
 
@@ -39,7 +39,7 @@ These FHIR templates are auto-generated from FHIR specification, and we can gene
 
 #### FHIR API Definitions
 
-FHIR defines a RESTful API interface to any FHIR resource](https://hl7.org/fhir/http.html). We built another tool to automatically generate the Open API Specification 3.0 based API definition files for any FHIR profile or an implementation guide. These API definitions can be imported to the API designer of WSO2 in order to expose respective FHIR APIs.
+FHIR defines a RESTful API to any [FHIR resource](https://hl7.org/fhir/http.html). We built another tool to automatically generate the OpenAPI Specification 3.0-based API definition files for any FHIR profile or an implementation guide. These API definitions can be imported to the API designer of WSO2 in order to expose respective FHIR APIs.
 
 #### Security and Privacy
 

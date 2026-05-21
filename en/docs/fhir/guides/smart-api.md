@@ -74,7 +74,7 @@ This creates the organization and opens the Project Home page of the default pro
 
     Follow the [official documentation](https://wso2.com/choreo/docs/develop-components/develop-services/develop-a-ballerina-rest-api/#step-2-build-and-deploy) to deploy the smart configuration prebuilt service to your organization.
 
-    On deployment, configurables mentioned in [Configurations](#configurations) needs to be configured in Choreo configurable editor.
+    On deployment, configurables mentioned in [Configurations](#configurations) need to be configured in the Choreo configurable editor.
 
 ## Configurations
 

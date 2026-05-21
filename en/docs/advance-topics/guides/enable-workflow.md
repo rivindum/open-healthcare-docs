@@ -11,7 +11,7 @@ Healthcare accelerator provides the following capabilities.
 
 - View the user details in a user creation request. 
 - Option to approve/reject user creation request. 
-- View the application details in a application creation request. 
+- View the application details in an application creation request. 
 - Option to approve/reject application creation request. 
 
 ## How to enable the User/Application creation workflow 
@@ -51,6 +51,6 @@ merge.sh
 1. Sign in to the Devportal and create an application. 
 2. Since the application creation flow is enabled, initially application will remain as inactive until it gets approved. 
 3. Login to the Admin Portal (https://localhost:9443/admin) and click on '**Application Creation**'. 
-4. The application creation request is displyed in the Admin Portal for Admin user to approve/reject. 
+4. The application creation request is displayed in the Admin Portal for Admin user to approve/reject. 
 ![application creation request](/assets/img/learn/workflow/application-creation-approval.png)
 5. Once the application creation request is approved, user should be able to use the application as it becomes active. 
