@@ -46,6 +46,10 @@ The [Ballerina Health Tool](https://ballerina.io/learn/health-tool/#fhir-templat
 
 4. Locate the generated OAS file(s) in the output directory. These will be used to create the API in WSO2 API Manager.
 
+:::tip
+For standard FHIR R4 APIs without a custom IG, you can skip this step and directly download a pre-built OAS file from the [FHIR API Definitions](./fhir-artifacts) page.
+:::
+
 ## Step 2 - Create and Deploy the API in WSO2 API Manager
 
 1. Log in to the WSO2 APIM Publisher Portal at `https://localhost:9443/publisher`.
@@ -74,7 +78,7 @@ The [Ballerina Health Tool](https://ballerina.io/learn/health-tool/#fhir-templat
 Ensure the WSO2 APIM gateway can reach the Ballerina FHIR service endpoint. If running locally, use `host.docker.internal` instead of `localhost` when APIM runs in Docker.
 :::
 
-## Step 4 - Verify the Deployment
+## Step 3 - Verify the Deployment
 
 1. Navigate to the Developer Portal at `https://localhost:9443/devportal`.
 

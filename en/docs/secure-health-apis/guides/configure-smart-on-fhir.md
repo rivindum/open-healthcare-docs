@@ -105,6 +105,7 @@ Service extensions required for the SMART on FHIR flow are available in the [WSO
     | `scimTokenEndpoint`     | Token endpoint to obtain the SCIM API access token.                                                                                                       | `https://localhost:9453/oauth2/token`    |
     | `scimPatientGroupName`  | Name of the user group used to identify patient users in the SCIM lookup.                                                                                 | `patient`                                |
     | `fhirUserAttributeName` | Name of the SCIM custom attribute that holds the FHIR user reference.                                                                                     | `fhirUser`                               |
+    | `patientAttributeName`  | Name of the SCIM custom attribute that holds the patient resource reference.                                                                              | `patient`                                |
     | `alwaysAllowedScopes`   | List of scopes that bypass consent checks in the pre-issue access token extension.                                                                        | `["openid", "internal_user_mgt_list"]`   |
     | `trustStorePath`        | Path to the truststore file containing the certificates required to establish SSL connection with other components.                                       | ``                                       |
     | `trustStorePassword`    | Truststore password                                                                                                                                       | ``                                       |
@@ -114,7 +115,7 @@ Service extensions required for the SMART on FHIR flow are available in the [WSO
 
 - Go to each service directory and build the service.
     ```bash
-    $ bal build
+    bal build
     ```
 - Create a `Config.toml` file and add the required configurations. You can refer to the sample `Config.toml.example` files available inside each of the service.
   - Start the services using the following command. 
@@ -123,14 +124,14 @@ Service extensions required for the SMART on FHIR flow are available in the [WSO
     <TabItem value="ballerina" label="Ballerina" default>
     
     ```bash
-    $ bal run
+    bal run
     ```
     
     </TabItem>
     <TabItem value="java" label="Java">
     
     ```bash
-    $ java -jar target/bin/<service-jar-file>.jar
+    java -jar target/bin/<service-jar-file>.jar
     ```
     
     </TabItem>
@@ -172,7 +173,7 @@ Service extensions required for the SMART on FHIR flow are available in the [WSO
     
   ![IS_user_groups.png](../../assets/img/learn/smart-on-fhir/IS_user_groups.png)
   :::note
-  The exact group names used here must be configured in the `Config.toml` of the `pre-issue-access-token-service-extension` (see `patientGroup` and `practitionerGroup` keys).
+  The exact group names used here must be configured in the `Config.toml` of the `pre-issue-access-token-service-extension` (see `scimPatientGroupName` key).
   :::
     
 ### 6. Setup [OpenFGC](https://github.com/wso2/openfgc).
@@ -227,8 +228,8 @@ Service extensions required for the SMART on FHIR flow are available in the [WSO
             "authorization_code",
             "client_credentials"
         ],
-        "jwks_uri": "https://localhost:9443/oauth2/jwks",
-        "revocation_endpoint": "https://localhost:9443/oauth2/revoke",
+        "jwks_uri": "https://localhost:9453/oauth2/jwks",
+        "revocation_endpoint": "https://localhost:9453/oauth2/revoke",
         "token_endpoint_auth_methods_supported": [
             "client_secret_basic",
             "client_secret_post"
@@ -239,9 +240,9 @@ Service extensions required for the SMART on FHIR flow are available in the [WSO
             "patient/*.cruds",
             "user/*.cruds"
         ],
-        "issuer": "https://localhost:9443/oauth2/token",
-        "authorization_endpoint": "https://localhost:9443/oauth2/authorize",
-        "token_endpoint": "https://localhost:9443/oauth2/token"
+        "issuer": "https://localhost:9453/oauth2/token",
+        "authorization_endpoint": "https://localhost:9453/oauth2/authorize",
+        "token_endpoint": "https://localhost:9453/oauth2/token"
     }
     ```
 

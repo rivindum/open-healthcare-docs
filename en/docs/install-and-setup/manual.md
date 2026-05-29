@@ -27,15 +27,15 @@ import TabItem from '@theme/TabItem';
 2. Extract the downloaded WSO2 Open Healthcare Accelerator zip files.
 3. This document uses the following placeholders to refer to the following products:
 
-| Product | 	Placeholder               |
------------------------|----------------------------|
-|WSO2 Identity Server	| `<WSO2_IS_HOME>`           |
-|WSO2 API Manager	| `<WSO2_APIM_HOME>`         |
-|WSO2 Open Healthcare Identity Server Accelerator | 	`<WSO2_OH_IS_ACC_HOME>`   |
-|WSO2 Open Healthcare API Manager Accelerator | 	`<WSO2_OH_APIM_ACC_HOME>` |
+| Product                                          | 	Placeholder               |
+|--------------------------------------------------|----------------------------|
+| WSO2 Identity Server	                            | `<WSO2_IS_HOME>`           |
+| WSO2 API Manager	                                | `<WSO2_APIM_HOME>`         |
+| WSO2 Open Healthcare Identity Server Accelerator | 	`<WSO2_OH_IS_ACC_HOME>`   |
+| WSO2 Open Healthcare API Manager Accelerator     | 	`<WSO2_OH_APIM_ACC_HOME>` |
 
 
-## Getting WSO2 Updates¶
+## Getting WSO2 Updates
 The WSO2 Update tool delivers hotfixes and updates seamlessly on top of products as WSO2 Updates. They include improvements that are released by WSO2. You need to update the base products and accelerators using the relevant script.
 
 1. Go to <PRODUCT_HOME>/bin and run the WSO2 Update tool:
@@ -77,11 +77,11 @@ This section guides you to set up and prepare your server to run WSO2 Open Healt
 
 ### Setting Up WSO2 API Manager for Healthcare
 
-1. Install WSO2 Open Healthcare AM Accelerator¶
+1. Install WSO2 Open Healthcare AM Accelerator
    - Copy the extracted WSO2 OH APIM Accelerator to `<WSO2_APIM_HOME>`. Let's call it `<WSO2_OH_APIM_ACC_HOME>`.
-   - [Optional] Check the accelerator configurations in <WSO2_HC_APIM_ACC_HOME>/conf/config.toml file to enable or disable features. 
+   - [Optional] Check the accelerator configurations in <WSO2_OH_APIM_ACC_HOME>/conf/config.toml file to enable or disable features. 
 
-   2. Run the merge script in <WSO2_APIM_HOME>/<WSO2_HC_APIM_ACC_HOME>/bin:
+   2. Run the merge script in <WSO2_APIM_HOME>/<WSO2_OH_APIM_ACC_HOME>/bin:
 
        ```bash
         ./merge.sh
@@ -89,11 +89,11 @@ This section guides you to set up and prepare your server to run WSO2 Open Healt
 
 ### Setting Up WSO2 Identity Server for Healthcare
 
-1. Install WSO2 Open Healthcare IS Accelerator¶
+1. Install WSO2 Open Healthcare IS Accelerator
     - Copy the extracted WSO2 OH IS Accelerator to `<WSO2_IS_HOME>`. Let's call it `<WSO2_OH_IS_ACC_HOME>`.
-    - [Optional] Check the accelerator configurations in <WSO2_HC_IS_ACC_HOME>/conf/config.toml file to enable or disable features.
+    - [Optional] Check the accelerator configurations in <WSO2_OH_IS_ACC_HOME>/conf/config.toml file to enable or disable features.
 
-   2. Run the merge script in <WSO2_IS_HOME>/<WSO2_HC_IS_ACC_HOME>/bin:
+   2. Run the merge script in <WSO2_IS_HOME>/<WSO2_OH_IS_ACC_HOME>/bin:
 
        ```sh
         ./merge.sh
@@ -168,13 +168,13 @@ Here Server A can be either IS, APIM or any other product.
 2. Export the public certificate of the newly generated key pair.
 
     ```sh
-    keytool -export -alias <cert_alias> -file <certificate_path> -keystore <keystore path>>
+    keytool -export -alias <cert_alias> -file <certificate_path> -keystore <keystore path>
     ```
 
 3. Import the public cert of Server A to the client truststores of all the servers including Server A.
 
     ```sh
-    keytool -import -trustcacerts -alias <cert_alias> -file <certificate_path> -keystore <trustore_path> -storepass <keystore_password> -noprompt
+    keytool -import -trustcacerts -alias <cert_alias> -file <certificate_path> -keystore <truststore_path> -storepass <keystore_password> -noprompt
     ```
 
 4. Repeat above steps for all the servers.
