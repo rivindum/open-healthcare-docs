@@ -16,7 +16,7 @@ These OAS files are based on the **FHIR R4** specification. To generate OAS file
 
 | API | Download |
 |-----|----------|
-| Patient API | [Download](../assets/specs/oas/PatientAPI.yaml) |
+| Patient API | <a href="pathname:///assets/specs/oas/PatientAPI.yaml" download>Download</a> |
 
 ## See Also
 
