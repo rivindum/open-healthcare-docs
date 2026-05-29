@@ -81,7 +81,7 @@ This section guides you to set up and prepare your server to run WSO2 Open Healt
    - Copy the extracted WSO2 OH APIM Accelerator to `<WSO2_APIM_HOME>`. Let's call it `<WSO2_OH_APIM_ACC_HOME>`.
    - [Optional] Check the accelerator configurations in <WSO2_OH_APIM_ACC_HOME>/conf/config.toml file to enable or disable features. 
 
-   2. Run the merge script in <WSO2_APIM_HOME>/<WSO2_OH_APIM_ACC_HOME>/bin:
+   2. Run the merge script in <WSO2_OH_APIM_ACC_HOME>/bin:
 
        ```bash
         ./merge.sh
@@ -93,7 +93,7 @@ This section guides you to set up and prepare your server to run WSO2 Open Healt
     - Copy the extracted WSO2 OH IS Accelerator to `<WSO2_IS_HOME>`. Let's call it `<WSO2_OH_IS_ACC_HOME>`.
     - [Optional] Check the accelerator configurations in <WSO2_OH_IS_ACC_HOME>/conf/config.toml file to enable or disable features.
 
-   2. Run the merge script in <WSO2_IS_HOME>/<WSO2_OH_IS_ACC_HOME>/bin:
+   2. Run the merge script in <WSO2_OH_IS_ACC_HOME>/bin:
 
        ```sh
         ./merge.sh
