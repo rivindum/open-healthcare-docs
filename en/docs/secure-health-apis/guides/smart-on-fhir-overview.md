@@ -72,6 +72,13 @@ Below are the key steps involved in launching a SMART app and gaining access to 
 
     Each API request includes the access token in the HTTP header (`Authorization: Bearer <ACCESS_TOKEN>`).
 
+:::tip SMART on FHIR Compliance
+WSO2 Open Healthcare is compliant with the **[SMART App Launch STU2.2](https://hl7.org/fhir/smart-app-launch/STU2.2/)** specification. You can download the full test report below.
+
+<a href="pathname:///assets/specs/report/SMART App Launch STU2.2 Test SessionReport.pdf" download>Download SMART App Launch STU2 Test Report</a>
+:::
+
+
 ## See Also
 
 - [SMART App Launch — HL7 specification](https://hl7.org/fhir/smart-app-launch/)
